@@ -1,0 +1,52 @@
+REACT BOOTSTRAP  npm install react-bootstrap bootstrap    
+    choose a theme
+        eg, bootswatch.com
+
+
+SETTING PATH
+    npm i react-router-dom
+
+    render the entire react app inside "BrowserRouter" component of react-router-dom library, provide this in main.jsx
+
+REACT WITH API PROJECT STEPS
+       1.create react project usong vite
+       2.remove unwanted code in src
+       3.Install any styling library
+       4.create a folder for different pages in src folder
+
+
+
+JSON SERVER CREATION
+---------------------
+1. Create a server folder to store JSON file
+2. Create a package.json (npm configuration file) file inside server folder : use 'npm init -y'
+3. Install json server package in server folder to run json file, use command to install json-server: npm i json-server
+4. Create a Json (db.json) file for storing project data
+5. To run json file and available in browser port use command in server folder: 'npx json-server db.json'
+
+
+API calls using axios Libraries: 
+    Axios is a promise based HTTP client for node.js and the browser 
+    - using axios library : install axios - 'npm install axios'
+    - To make HTTP requests using axios : axios(config)
+        - config: is an predefined object with keys: (method, url, data, headers)
+    - HTTP response using axios will always return object with predefined keys(data, (server response), status)
+    - create service folder inside src of your react app
+
+Data sharing between components in react
+    - State lifting : 
+
+Hosting JSON server -
+    1. Delete alpha/beta existing dependency and install stable json-server - npm i json-server@0.17.4
+    2. Create a index.js file inside server folder
+    3. Update script key of package.json file with {"start" : "node index.js"} and remove test key from it
+    4. Create .gitignore file, to node_modules inside it
+    5. Define steps to run db.json file using json-server in index.js
+        - import json-server
+        - create a server for mediaplayer app in order to run our server app
+        - create a middleware to convert json data to js
+        - create a port for executing our app
+        - set up a path/route for db.json file so that client can make the request
+        - use the middleware, route inside the server
+        - run the server using given port
+        - to execute our app we have to use : node index.js in terminal, so that we can see the output in localhost
